@@ -8,3 +8,9 @@ export * from './currency';
 export * from './datetime';
 export * from './distance';
 export * from './string';
+
+/**
+ * 设置语言
+ * @param {string} lang
+ */
+export function locale(lang);

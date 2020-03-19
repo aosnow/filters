@@ -82,13 +82,13 @@ module.exports = {
 
     // 新插件
     // 按需打包 moment 语言包
-    config.plugin('moment')
-          .use(
-            new webpack.ContextReplacementPlugin(
-              /moment[\\\/]locale$/,
-              /^\.\/(zh-cn)$/
-            )
-          );
+    // config.plugin('moment')
+    //       .use(
+    //         new webpack.ContextReplacementPlugin(
+    //           /moment[\\\/]locale$/,
+    //           /^\.\/(zh-cn)$/
+    //         )
+    //       );
 
   }
 };

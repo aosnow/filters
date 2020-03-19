@@ -10,20 +10,27 @@
     <el-alert>
       <div>原始值：{{currency(money)}}</div>
       <div>去除末尾0：{{currency(money,true)}}</div>
+      <div>有符号：{{currency(money,false,true)}}</div>
+      <div>无符号：{{currency(money,true,false)}}</div>
     </el-alert>
+
+    日期时间：
+    <el-alert>格式化日期（YYYY-MM-DD）：{{dateformat(new Date())}}</el-alert>
+    <el-alert>格式化时间：{{timestr(date)}}</el-alert>
   </div>
 </template>
 
 <script>
-import { repeat, trim, currency } from '@mudas/filters';
+import { repeat, trim, currency, dateformat, timestr } from '@mudas/filters';
 
 export default {
   name: 'app',
   mixins: [],
   data() {
     return {
-      value: '',
-      money: ''
+      value: 'abc',
+      date: 86400000,
+      money: 10.50
     };
   },
   computed: {
@@ -33,7 +40,9 @@ export default {
   },
 
   methods: {
-    currency
+    currency,
+    dateformat,
+    timestr
   }
 };
 </script>
