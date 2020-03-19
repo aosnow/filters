@@ -18,7 +18,7 @@ export function momentjs(...args);
  * @return {string}
  * @overview http://momentjs.cn/docs/#/displaying/
  */
-export function dateNormalize(dateInfo, format?:string):string;
+export function dateformat(dateInfo, format?:string):string;
 
 /**
  * 将毫秒级转化为相应的时间字符串
