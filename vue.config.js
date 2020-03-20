@@ -13,7 +13,7 @@ function resolve(...dir) {
 }
 
 // 排除所有不必要的模块，让宿主环境去安排必要的第三方包
-const regexp = /^(core-js|currency.js|moment)/i;
+const regexp = /^(core-js|lodash|currency.js|moment)/i;
 const externals = isDebug ? '' : [regexp];
 
 // 配置集合
