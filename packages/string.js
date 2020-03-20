@@ -4,7 +4,7 @@
 // created: 2019/6/26 21:04
 // ------------------------------------------------------------------------------
 
-import repeat from 'lodash-es/repeat';
-import trim from 'lodash-es/trim';
+import repeat from 'lodash.repeat';
+import trim from 'lodash.trim';
 
 export { repeat, trim };

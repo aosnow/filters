@@ -13,7 +13,7 @@ function resolve(...dir) {
 }
 
 // 排除所有不必要的模块，让宿主环境去安排必要的第三方包
-const regexp = /^(core-js|currency.js|lodash-es|moment)/i;
+const regexp = /^(core-js|currency.js|moment)/i;
 const externals = isDebug ? '' : [regexp];
 
 // 配置集合
@@ -48,6 +48,9 @@ module.exports = {
     // 不分割任何模块（子模块合并，因此包不能过大）
     optimization: {
       minimize: !isDebug,
+      providedExports: true,
+      sideEffects: true,
+
       // 开发时爱怎么分割怎么分，少做点合并包的事应该会快点吧
       splitChunks: isDebug ? {} : false
     },
