@@ -6,6 +6,18 @@ install:
 ```npm
 npm i @mudas/filters -S
 ```
+
+You need to add configuration for vue-cli to correctly translate the es module in node_modules:
+```js
+// vue.config.js:
+module.exports = {
+    transpileDependencies: [
+      '@mudas/*' // all of node_module for '@mudas'
+    ]
+}
+```
+
+
 setup:
 ```js
 import {currency} from '@mudas/filters';
